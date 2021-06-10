@@ -4,8 +4,14 @@ import React from "react";
 function MyApp({ Component, pageProps }) {
     const theme = createMuiTheme({
         typography: {
-            htmlFontSize: 10,
-            fontSize: 5,
+            htmlFontSize: 16,
+            fontSize: 8,
+            h5:{
+                fontSize: '.3rem',
+            },
+            button:{
+                fontSize: '.1rem',
+            }
         },
     });
 

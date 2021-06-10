@@ -125,9 +125,6 @@ export default function Posts({ userName, image, post,min }) {
                 <IconButton aria-label="add to favorites">
                     <MoodBadIcon />
                 </IconButton>
-                <IconButton aria-label="share">
-                    <ShareIcon />
-                </IconButton>
                 <IconButton aria-label="add to favorites">
                     <FavoriteIcon />
                 </IconButton>

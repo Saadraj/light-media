@@ -53,7 +53,8 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         bg:{
             height:'100vh',
-            overflowY:'scroll'
+            overflowY:'scroll',
+            paddingBottom:theme.spacing(11),
         }
     })
 );

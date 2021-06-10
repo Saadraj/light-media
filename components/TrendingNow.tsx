@@ -65,13 +65,13 @@ const Trending = () => {
                 <Grid container>
                     {suggest?.map((v) => (
                         <Grid item xs={12} className={classes.user} key={v}>
-                            <Typography className={classes.count}>
-                                {v.type} trending
+                            <Typography variant='h5' className={classes.count}>
+                                {v.type || 'dolar'} trending
                             </Typography>
-                            <Typography className={classes.name} variant="h6">
-                                #{v.name}
+                            <Typography variant='h5' className={classes.name}>
+                                #{v.name || 'dolar'}
                             </Typography>
-                            <Typography className={classes.count}>
+                            <Typography variant='h5' className={classes.count}>
                                 {v.count}K
                             </Typography>
                         </Grid>

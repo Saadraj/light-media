@@ -80,22 +80,22 @@ const Follow = () => {
                             key={v}
                         >
                             <Box display="flex">
-                                <Image
+                                <img
                                     src="/img/user.png"
                                     alt="suggested user"
-                                    height="30rem"
-                                    width="60rem"
+                                    height="40rem"
+                                    width="50rem"
                                 />
                                 <Box>
-                                    <Typography className={classes.name}>
-                                        {v}
+                                    <Typography variant='h5' className={classes.name}>
+                                        {v ||'dolar'}
                                     </Typography>
-                                    <Typography>@{v}</Typography>
+                                    <Typography variant='h5'>@{v}</Typography>
                                 </Box>
                             </Box>
                             <Button
                                 variant="contained"
-                                size="small"
+                                // size="small"
                                 className={classes.btn}
                             >
                                 Follow

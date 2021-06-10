@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme: Theme) =>
         bg: {
             backgroundColor: "#dedede",
             height: "100vh",
-            overflowY: "auto",
+            overflowY: "hidden",
             paddingTop:theme.spacing(8)
         },
     })

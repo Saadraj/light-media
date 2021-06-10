@@ -78,7 +78,7 @@ const Content = () => {
             <Friends />
             <Box>
                 {suggest?.map((v) => (
-                    <Box pt={5} key={v.name}>
+                    <Box pt={2} key={v.name}>
                         <Posts
                             userName={v.name}
                             image={v.image}

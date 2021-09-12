@@ -6,7 +6,7 @@ import auth from "../../requestHandler/auth";
 const post = [
     {
         name: "Lorem ipsum dolor sit amet consectetur adipisicing".split(" ")[
-            Math.round(Math.random() * 6)+1
+            Math.round(Math.random() * 6) + 1
         ],
         image: Boolean("0 1".split(" ")[Math.round(Math.random() * 2)]),
         post: Boolean("0 1".split(" ")[Math.round(Math.random() * 2)]),
@@ -14,7 +14,7 @@ const post = [
     },
     {
         name: "Lorem ipsum dolor sit amet consectetur adipisicing".split(" ")[
-            Math.round(Math.random() * 6)+1
+            Math.round(Math.random() * 6) + 1
         ],
         image: Boolean("0 1".split(" ")[Math.round(Math.random() * 2)]),
         post: Boolean("0 1".split(" ")[Math.round(Math.random() * 2)]),
@@ -22,7 +22,7 @@ const post = [
     },
     {
         name: "Lorem ipsum dolor sit amet consectetur adipisicing".split(" ")[
-            Math.round(Math.random() * 6)+1
+            Math.round(Math.random() * 6) + 1
         ],
         image: Boolean("0 1".split(" ")[Math.round(Math.random() * 2)]),
         post: Boolean("0 1".split(" ")[Math.round(Math.random() * 2)]),
@@ -30,7 +30,7 @@ const post = [
     },
     {
         name: "Lorem ipsum dolor sit amet consectetur adipisicing".split(" ")[
-            Math.round(Math.random() * 6)+1
+            Math.round(Math.random() * 6) + 1
         ],
         image: Boolean("0 1".split(" ")[Math.round(Math.random() * 2)]),
         post: Boolean("0 1".split(" ")[Math.round(Math.random() * 2)]),
@@ -38,7 +38,7 @@ const post = [
     },
     {
         name: "Lorem ipsum dolor sit amet consectetur adipisicing".split(" ")[
-            Math.round(Math.random() * 6)+1
+            Math.round(Math.random() * 6) + 1
         ],
         image: Boolean("0 1".split(" ")[Math.round(Math.random() * 2)]),
         post: Boolean("0 1".split(" ")[Math.round(Math.random() * 2)]),
@@ -51,7 +51,7 @@ const handler = nc<NextApiRequest, NextApiResponse>()
     .get(async (req, res, next) => {
         res.json({
             success: true,
-            data: post
+            data: post,
         });
     });
 

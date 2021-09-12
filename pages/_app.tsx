@@ -6,18 +6,18 @@ function MyApp({ Component, pageProps }) {
         typography: {
             htmlFontSize: 16,
             fontSize: 8,
-            h5:{
-                fontSize: '.3rem',
+            h5: {
+                fontSize: ".3rem",
             },
-            button:{
-                fontSize: '.1rem',
-            }
+            button: {
+                fontSize: ".1rem",
+            },
         },
     });
 
     return (
         <ThemeProvider theme={theme}>
-            <CssBaseline/>
+            <CssBaseline />
             <Component {...pageProps} />
         </ThemeProvider>
     );

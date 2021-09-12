@@ -11,7 +11,7 @@ import {
     Paper,
     TextField,
     Theme,
-    Typography
+    Typography,
 } from "@material-ui/core";
 import { Alert } from "@material-ui/lab";
 import axios from "axios";
@@ -50,12 +50,12 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         forgot: {
             // fontFamily: "nexalight",
-            color:'#1877f2',
+            color: "#1877f2",
             paddingTop: theme.spacing(5),
         },
-        paddingTop:{ 
-        paddingTop:theme.spacing(5),
-    }
+        paddingTop: {
+            paddingTop: theme.spacing(5),
+        },
     })
 );
 
@@ -103,102 +103,118 @@ const Login = () => {
                     </Grid>
                     <Grid item xs={6}>
                         <Box p={11}>
-                        <Paper
-                            elevation={0}
-                            style={{
-                                padding: "20px",
-                            }}
-                        >
-                            <Formik
-                                initialValues={initialValues}
-                                validationSchema={loginValidationSchema}
-                                onSubmit={(value) => submitSignUp(value)}
+                            <Paper
+                                elevation={0}
+                                style={{
+                                    padding: "20px",
+                                }}
                             >
-                                {({ isSubmitting, isValidating }) => (
-                                    <Form>
-                                        {errorMessage && (
-                                            <Alert
-                                                severity="error"
-                                                onClose={() => {
-                                                    setErrorMessage("");
-                                                }}
-                                            >
-                                                {errorMessage}
-                                            </Alert>
-                                        )}
-                                        <FormControl fullWidth margin="normal">
-                                            <Field
-                                                as={TextField}
-                                                name="email"
-                                                placeholder="Email address or phone number"
-                                                variant="outlined"
-                                            />
-                                            <ErrorMessage name="email">
-                                                {(msg) => (
-                                                    <FormHelperText
-                                                        className={
-                                                            classes.error
-                                                        }
-                                                    >
-                                                        {msg}
-                                                    </FormHelperText>
-                                                )}
-                                            </ErrorMessage>
-                                        </FormControl>
-                                        <FormControl fullWidth margin="normal">
-                                            <Field
-                                                as={TextField}
-                                                name="password"
-                                                placeholder="Password"
-                                                variant="outlined"
-                                                type="password"
-                                            />
-                                            <ErrorMessage name="password">
-                                                {(msg) => (
-                                                    <FormHelperText
-                                                        className={
-                                                            classes.error
-                                                        }
-                                                    >
-                                                        {msg}
-                                                    </FormHelperText>
-                                                )}
-                                            </ErrorMessage>
-                                        </FormControl>
-                                        <FormControl fullWidth margin="normal">
-                                            <Button
-                                                variant="contained"
-                                                className={classes.btn}
-                                                type="submit"
-                                                disabled={
-                                                    isSubmitting || isValidating
-                                                }
-                                            >
-                                                Login
-                                            </Button>
-                                        </FormControl>
-                                    </Form>
-                                )}
-                            </Formik>
-                            <Typography
-                                align="center"
-                                gutterBottom
-                                variant="h4"
-                                className={classes.forgot}
-                            >
-                                Forgotten password
-                            </Typography>
-                            <Divider />
-                            <Grid container justify="center" className={classes.paddingTop}>
-                                <Button
-                                    variant="contained"
-                                    className={classes.btn}
-                                    onClick={()=>{router.push('/signup')}}
+                                <Formik
+                                    initialValues={initialValues}
+                                    validationSchema={loginValidationSchema}
+                                    onSubmit={(value) => submitSignUp(value)}
                                 >
-                                    create a new account
-                                </Button>
-                            </Grid>
-                        </Paper>
+                                    {({ isSubmitting, isValidating }) => (
+                                        <Form>
+                                            {errorMessage && (
+                                                <Alert
+                                                    severity="error"
+                                                    onClose={() => {
+                                                        setErrorMessage("");
+                                                    }}
+                                                >
+                                                    {errorMessage}
+                                                </Alert>
+                                            )}
+                                            <FormControl
+                                                fullWidth
+                                                margin="normal"
+                                            >
+                                                <Field
+                                                    as={TextField}
+                                                    name="email"
+                                                    placeholder="Email address or phone number"
+                                                    variant="outlined"
+                                                />
+                                                <ErrorMessage name="email">
+                                                    {(msg) => (
+                                                        <FormHelperText
+                                                            className={
+                                                                classes.error
+                                                            }
+                                                        >
+                                                            {msg}
+                                                        </FormHelperText>
+                                                    )}
+                                                </ErrorMessage>
+                                            </FormControl>
+                                            <FormControl
+                                                fullWidth
+                                                margin="normal"
+                                            >
+                                                <Field
+                                                    as={TextField}
+                                                    name="password"
+                                                    placeholder="Password"
+                                                    variant="outlined"
+                                                    type="password"
+                                                />
+                                                <ErrorMessage name="password">
+                                                    {(msg) => (
+                                                        <FormHelperText
+                                                            className={
+                                                                classes.error
+                                                            }
+                                                        >
+                                                            {msg}
+                                                        </FormHelperText>
+                                                    )}
+                                                </ErrorMessage>
+                                            </FormControl>
+                                            <FormControl
+                                                fullWidth
+                                                margin="normal"
+                                            >
+                                                <Button
+                                                    variant="contained"
+                                                    className={classes.btn}
+                                                    type="submit"
+                                                    disabled={
+                                                        isSubmitting ||
+                                                        isValidating
+                                                    }
+                                                >
+                                                    Login
+                                                </Button>
+                                            </FormControl>
+                                        </Form>
+                                    )}
+                                </Formik>
+                                <Typography
+                                    align="center"
+                                    gutterBottom
+                                    variant="h4"
+                                    className={classes.forgot}
+                                >
+                                    Forgotten password
+                                </Typography>
+                                <Divider />
+                                <Grid
+                                    container
+                                    justify="center"
+                                    className={classes.paddingTop}
+                                >
+                                    <Button
+                                        variant="contained"
+                                        className={classes.btn}
+                                        onClick={() => {
+                                            router.push("/signup");
+                                        }}
+                                    >
+                                        create a new account
+                                    </Button>
+                                </Grid>
+                            </Paper>
                         </Box>
                     </Grid>
                 </Grid>

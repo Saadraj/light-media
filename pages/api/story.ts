@@ -8,7 +8,9 @@ const handler = nc<NextApiRequest, NextApiResponse>()
     .get(async (req, res, next) => {
         res.json({
             success: true,
-            data: "create a story,Lorem,ipsum ,dolor ,sit, amet ,consectetur, adipisicing".split(",")
+            data: "create a story,Lorem,ipsum ,dolor ,sit, amet ,consectetur, adipisicing".split(
+                ","
+            ),
         });
     });
 

@@ -1,0 +1,16 @@
+export const LOADING = "LOADING";
+export const PROGRESS = "PROGRESS";
+export const CREATE_POST = "CREATE_POST";
+export const CLOSE_MODAL = "CLOSE_MODAL";
+export const SHOW_IMAGE = "SHOW_IMAGE";
+export const CLOSE_IMAGE = "CLOSE_IMAGE";
+export const SHOW_PROFILE_IMAGE = "SHOW_PROFILE_IMAGE";
+export const CLOSE_PROFILE_IMAGE = "CLOSE_PROFILE_IMAGE";
+export const SHOW_COVER_IMAGE = "SHOW_COVER_IMAGE";
+export const CLOSE_COVER_IMAGE = "CLOSE_COVER_IMAGE";
+export const LOGIN = "LOGIN";
+export const LOGOUT = "LOGOUT";
+export const NOTIFICATION_ADD = "NOTIFICATION_ADD";
+export const NOTIFICATION_REMOVE = "NOTIFICATION_REMOVE";
+export const SHOW_OF_MODAL = "SHOW_OF_MODAL";
+export const CLOSE_OF_MODAL = "CLOSE_OF_MODAL";

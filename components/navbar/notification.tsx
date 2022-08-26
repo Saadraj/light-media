@@ -3,7 +3,7 @@ import { BellIcon } from "@heroicons/react/outline";
 import { onValue, ref, remove } from "firebase/database";
 import Image from "next/image";
 import Link from "next/link";
-import React, { Fragment, memo, useCallback, useEffect, useState } from "react";
+import { Fragment, memo, useCallback, useEffect, useState } from "react";
 import Moment from "react-moment";
 import { database } from "../../firebase";
 import { notificationTypes } from "../../state";
@@ -34,14 +34,14 @@ const Notification = () => {
     );
 
     return (
-        <Menu as="div" className="ml-3 relative">
+        <Menu as="div" className="relative ml-3">
             <div>
-                <Menu.Button className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                <Menu.Button className="p-1 text-gray-400 bg-gray-800 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                     <span className="sr-only">View notifications</span>
-                    <BellIcon className="h-6 w-6" aria-hidden="true" />
+                    <BellIcon className="w-6 h-6" aria-hidden="true" />
                 </Menu.Button>
                 {state && Object?.keys(state) && (
-                    <sub className="absolute animate-bounce right-0 top-0 bg-pink-500 text-gray-100 h-4 w-4 rounded-full flex items-center justify-center">
+                    <sub className="absolute top-0 right-0 flex items-center justify-center w-4 h-4 text-gray-100 bg-pink-500 rounded-full animate-bounce">
                         {Object?.keys(state)?.length}
                     </sub>
                 )}
@@ -55,7 +55,7 @@ const Notification = () => {
                 leaveFrom="transform opacity-100 scale-100"
                 leaveTo="transform opacity-0 scale-95"
             >
-                <Menu.Items className="origin-top-right absolute right-0 mt-2 w-auto max-h-96 sm:w-1/2 overflow-y-scroll rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                <Menu.Items className="absolute right-0 py-1 mt-2 overflow-y-scroll origin-top-right bg-white rounded-md shadow-lg max-h-96 w-72 ring-1 ring-black ring-opacity-5 focus:outline-none">
                     {state ? (
                         Object?.keys(state) &&
                         Object?.keys(state)
@@ -77,11 +77,11 @@ const Notification = () => {
                                                 >
                                                     <div className="flex truncate">
                                                         <div className="flex">
-                                                            <h4 className="font-semibold flex items-center justify-center space-x-2">
-                                                                <div className="overflow-hidden rounded-full border border-gray-500">
-                                                                    <div className="relative h-7 w-7 flex items-center justify-center">
+                                                            <h4 className="flex items-center justify-center space-x-2 font-semibold">
+                                                                <div className="overflow-hidden border border-gray-500 rounded-full">
+                                                                    <div className="relative flex items-center justify-center h-7 w-7">
                                                                         <Image
-                                                                            className="object-center object-cover "
+                                                                            className="object-cover object-center "
                                                                             src={
                                                                                 state[
                                                                                     v
@@ -130,7 +130,7 @@ const Notification = () => {
                                 </Menu.Item>
                             ))
                     ) : (
-                        <p className="font-semibold text-sm text-gray-500 flex items-center justify-center p-8">
+                        <p className="flex items-center justify-center p-8 text-sm font-semibold text-gray-500">
                             No Notifications
                         </p>
                     )}

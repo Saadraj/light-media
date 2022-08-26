@@ -11,7 +11,7 @@ export const getAllFollowers = async (
         .select("follower")
         .populate("follower");
     return res.json({
-        followers: followers.follower,
+        followers: followers?.follower,
         success: true,
         message: "All followers",
     });

@@ -85,7 +85,7 @@ export const deletePost = async (req: NextApiRequest, res: NextApiResponse) => {
         const singlePost = await postModel
             .findById(req.query.postId)
             .populate("user");
-        if (singlePost.user._id === req.query.id) {
+        if (singlePost?.user._id === req.query.id) {
             const post = await postModel.findOneAndDelete({
                 _id: req.query.postId,
             });
